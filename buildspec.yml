@@ -3,18 +3,20 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
+    commands:
+      - echo "Installing ALL dependencies including dev..."
+      - npm install --include=dev
+      # For npm < 7 use: npm install --production=false
   pre_build:
     commands:
-      - echo Installing dependencies
-      - npm install
+      - echo "Verifying Tailwind installation..."
+      - npx tailwindcss --version
+      - node -e "console.log('tailwindcss found:', require('tailwindcss/package.json').version)"
   build:
     commands:
-      - echo Build started on `date`
+      - echo "Building SoundWave app..."
       - npm run build
-  post_build:
-    commands:
-      - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
-  base-directory: build
+    - 'dist/**/*'
+    - 'build/**/*'
