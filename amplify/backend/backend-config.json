@@ -1,0 +1,125 @@
+{
+  "api": {
+    "musicapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "musicfunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "soundwavecbdb4458": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "S3Triggercff8821f": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "musicfunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "SongsTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_S3Triggercff8821f_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggercff8821f"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Triggercff8821f_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggercff8821f"
+        }
+      ]
+    },
+    "AMPLIFY_function_musicfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "musicfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_musicfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "musicfunction"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "SongsTable": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "musicstorage": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Triggercff8821f"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

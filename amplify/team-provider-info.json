@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-soundwave-dev-05ac0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::789814231721:role/amplify-soundwave-dev-05ac0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::789814231721:role/amplify-soundwave-dev-05ac0-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-soundwave-dev-05ac0-deployment",
+      "UnauthRoleName": "amplify-soundwave-dev-05ac0-unauthRole",
+      "StackName": "amplify-soundwave-dev-05ac0",
+      "StackId": "arn:aws:cloudformation:ap-south-1:789814231721:stack/amplify-soundwave-dev-05ac0/af9086d0-8ed8-11f0-9875-068e4981dda3",
+      "AmplifyAppId": "d6rzdq7v0b7pv",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-soundwave-dev-05ac0-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "soundwavecbdb4458": {}
+      },
+      "function": {
+        "musicfunction": {
+          "deploymentBucketName": "amplify-soundwave-dev-05ac0-deployment",
+          "s3Key": "amplify-builds/musicfunction-39646d7a5579306e6e2b-build.zip"
+        },
+        "S3Triggercff8821f": {
+          "deploymentBucketName": "amplify-soundwave-dev-05ac0-deployment",
+          "s3Key": "amplify-builds/S3Triggercff8821f-74735573643479342b6c-build.zip"
+        }
+      },
+      "storage": {
+        "musicstorage": {},
+        "SongsTable": {}
+      },
+      "api": {
+        "musicapi": {}
+      }
+    }
+  }
+}

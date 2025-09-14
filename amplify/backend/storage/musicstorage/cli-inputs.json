@@ -1,0 +1,17 @@
+{
+  "resourceName": "musicstorage",
+  "policyUUID": "364efb3d",
+  "bucketName": "soundwaveb5d3f0888a6e4004a01a59a253a3e3dc",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Triggercff8821f",
+  "groupAccess": {}
+}

@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #505050;
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom Amplify UI styling */
+[data-amplify-authenticator] {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%) !important;
+  min-height: 100vh;
+}
+
+[data-amplify-authenticator] [data-amplify-container] {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%) !important;
+  border-radius: 20px !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Style input fields */
+[data-amplify-authenticator] input {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid #333 !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+}
+
+[data-amplify-authenticator] input:focus {
+  border-color: #4ecdc4 !important;
+  box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2) !important;
+}
+
+/* Style buttons */
+[data-amplify-authenticator] button[type="submit"] {
+  background: linear-gradient(45deg, #4ecdc4, #45b7d1) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-amplify-authenticator] button[type="submit"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4) !important;
+}
+
+/* Style text and labels */
+[data-amplify-authenticator] h1,
+[data-amplify-authenticator] h2,
+[data-amplify-authenticator] h3,
+[data-amplify-authenticator] label,
+[data-amplify-authenticator] span {
+  color: #fff !important;
+}
+
+[data-amplify-authenticator] a {
+  color: #4ecdc4 !important;
+}
+
+[data-amplify-authenticator] a:hover {
+  color: #45b7d1 !important;
+}
+
+/* Add padding bottom to prevent content from being hidden behind the player */
+body {
+  padding-bottom: 100px; /* Adjust based on your player height */
+}
+
+/* Custom range slider styling for the volume control */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-track {
+  background: #374151;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #374151;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  border: none;
+}
+
+/* Add to your existing App.css */
+
+/* Optimize font loading */
+body {
+  font-display: swap;
+}
+
+/* Optimize images */
+img {
+  loading: lazy;
+}
+
+/* Reduce initial paint time */
+* {
+  box-sizing: border-box;
+}

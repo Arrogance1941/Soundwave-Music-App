@@ -1,0 +1,15 @@
+{
+  "name": "musicfunction",
+  "version": "1.0.0",
+  "description": "Lambda function for SoundWave",
+  "main": "index.js",
+  "type": "module",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.188.0",
+    "@aws-sdk/lib-dynamodb": "^3.188.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.92"
+  }
+}
