@@ -19,7 +19,7 @@
       "function": {
         "musicfunction": {
           "deploymentBucketName": "amplify-soundwave-dev-05ac0-deployment",
-          "s3Key": "amplify-builds/musicfunction-39646d7a5579306e6e2b-build.zip"
+          "s3Key": "amplify-builds/musicfunction-38536575617446744635-build.zip"
         },
         "S3Triggercff8821f": {
           "deploymentBucketName": "amplify-soundwave-dev-05ac0-deployment",
